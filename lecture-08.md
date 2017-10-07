@@ -39,13 +39,11 @@ Non tail recursive calls can be rewritten as tail recursive calls.
 >What's happening when you call a subroutine? A Shift of control is a branch <=> is a goto. 
 >
 > When goto is finished, optionally, we have to get back to the start. Stashing the next address is not optional. 
-> 
-<br/>
-
+>  
+>  
 > Arguments
-> 
-<br/>
-
+>   
+>  
 > Subroutines don't always take arguments. Often they have to calculate them. It can be arranged that these arguments end up where they will be needed at time of calculating them.
 > 
 <br/>
@@ -55,9 +53,8 @@ Non tail recursive calls can be rewritten as tail recursive calls.
 <br/>
 
 > Firstly, to translate the c function into a low level 'thing' we considered a label to be the target of a machine call. 
-> 
-<br/>
-
+>  
+>  
 > Every program point will call a procedure, and arguments will all be live variables. 
 > 
 <br/>
@@ -89,14 +86,13 @@ Non tail recursive calls can be rewritten as tail recursive calls.
 >	Each procedure names a label  
 >	Each label is a hunk of code  
 >	Each hunk of code calls a procedure  
-> 
-<br/>
-	
+>   
+>  	
 >	Think in terms of two alternatives:  
 >		Alt 1: Return pops a balance from the return stack & puts it into the program.  
 >		Alt 2: Why not just reutrn to where it's needed?   
->   
->  
+>     
+>    
 >	Think of Alt 2 as an optimisation.   
 >	In large programs this is very beneficial because we can avoid exhausting the stack.  
 >  

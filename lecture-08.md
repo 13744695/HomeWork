@@ -62,7 +62,8 @@ Non tail recursive calls can be rewritten as tail recursive calls.
 > 
 <br/>
 
- 	1.  The following is a loose transcript of (a representation of) some machine code from the board with comments. Please refer to the .scm file when it becomes availabel for accurate transcript:
+ 	1. <b> The following is a loose transcript of (a representation of) some machine code from the board with comments.
+	Please refer to the .scm file when it becomes availabel for accurate transcript:<b/>
 	
 	fact (n): 		;;Label taking in a live variable n.
 	L0 (n):			;;Calls label 1 with a value of n & 1

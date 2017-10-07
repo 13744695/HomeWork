@@ -33,8 +33,9 @@ Non tail recursive calls can be rewritten as tail recursive calls.
 <br/>
 
 >BUT.... It's JUST as inexpensive as a goto!! 
-
+> 
 <br/>
+
 >What's happening when you call a subroutine? A Shift of control is a branch <=> is a goto. 
 >
 > When goto is finished, optionally, we have to get back to the start. Stashing the next address is not optional. 
@@ -46,24 +47,23 @@ Non tail recursive calls can be rewritten as tail recursive calls.
 <br/>
 
 > Subroutines don't always take arguments. Often they have to calculate them. It can be arranged that these arguments end up where they will be needed at time of calculating them.
->
+> 
 <br/>
->
+
 > Please see the factorial function created in C then translated into a scheme function in this lectures .scm file. 
->
+> 
 <br/>
->
+
 > Firstly, to translate the c function into a low level 'thing' we considered a label to be the target of a machine call. 
->
-<br/> 
->
-> Every program point will call a procedure, and arguments will all be live variables. 
->
-<br/> 
->
-> The following is a loose transcript of some code from the board with comments. Please refer to the .scm file when it becomes available for accurate transcript.
-
+> 
 <br/>
 
+> Every program point will call a procedure, and arguments will all be live variables. 
+> 
+<br/>
+
+> The following is a loose transcript of some code from the board with comments. Please refer to the .scm file when it becomes available for accurate transcript.
+> 
+<br/>
 
   

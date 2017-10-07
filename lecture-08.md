@@ -62,8 +62,26 @@ Non tail recursive calls can be rewritten as tail recursive calls.
 > 
 <br/>
 
-> The following is a loose transcript of some code from the board with comments. Please refer to the .scm file when it becomes available for accurate transcript.
-> 
-<br/>
-
-  
+ 	1.  The following is a loose transcript of (a representation of) some machine code from the board with comments. Please refer to the .scm file when it becomes availabel for accurate transcript:
+	
+	fact (n): 		;;Label taking in a live variable n.
+	L0 (n):			;;Calls label 1 with a value of n & 1
+	L1 (n, a):		;;Goes to top of the loop, calls L2 with initial value of 1
+	L2 (i, n, a):	
+		if(i<=n)
+		L3(i, n, a*i)
+		else L4(a)
+		L3(i, n, a):
+	L2 (i+1, n, a)	;;end of loop so increment i
+	L4 (a): 		;;only a is alive now.
+	
+	2.	Next, he translates this into scheme. 
+	Each procedure names a label 
+	Each label is a hunk of code
+	Each hunk of code calls a procedure
+	
+	"Tail call is a result that's returned that will immediately be returned by the caller."
+	
+	
+	
+	

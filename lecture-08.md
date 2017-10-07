@@ -61,9 +61,12 @@ Non tail recursive calls can be rewritten as tail recursive calls.
 > Every program point will call a procedure, and arguments will all be live variables. 
 > 
 <br/>
+
 - The following is a loose transcript of (a representation of) some machine code from the board with comments.
+
 - (Please refer to the .scm file when it becomes available for accurate transcript:)
 
+<br/>
  	1. 
 	
 	fact (n): 		;;Label taking in a live variable n.
@@ -77,13 +80,26 @@ Non tail recursive calls can be rewritten as tail recursive calls.
 	L2 (i+1, n, a)	;;end of loop so increment i
 	L4 (a): 		;;only a is alive now.
 	
-	2.	Next, he translates this into scheme. 
+	2.	Next, this is translated into scheme. 
+	
+	Notes:
 	Each procedure names a label 
 	Each label is a hunk of code
 	Each hunk of code calls a procedure
 	
-	"Tail call is a result that's returned that will immediately be returned by the caller."
+	3.	Think in terms of two alternatives:
+		Alt 1: Return pops a balance from the return stack & puts it into the program.
+		Alt 2: Why not just reutrn to where it's needed? 
+> 
+<br/>
 	
+	Think of Alt 2 as an optimisation. 
+	In large programs this is very beneficial because we can avoid exhausting the stack.
+	
+	"Tail call is a result that's returned which will immediately be returned by the caller."
+	
+	Notion related to tail calls: Somtime recursive. (calls itself).
+	When recursion is finished, if recursion has a tail call, you call it a tail recursive definition
 	
 	
 	

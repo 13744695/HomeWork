@@ -86,24 +86,24 @@ Non tail recursive calls can be rewritten as tail recursive calls.
 <br/>
 	
 >Notes:
->	Each procedure names a label 
->	Each label is a hunk of code
->	Each hunk of code calls a procedure
+>	Each procedure names a label  
+>	Each label is a hunk of code  
+>	Each hunk of code calls a procedure  
 > 
 <br/>
 	
->	Think in terms of two alternatives:
->		Alt 1: Return pops a balance from the return stack & puts it into the program.
->		Alt 2: Why not just reutrn to where it's needed? 
+>	Think in terms of two alternatives:  
+>		Alt 1: Return pops a balance from the return stack & puts it into the program.  
+>		Alt 2: Why not just reutrn to where it's needed?   
 > 
 <br/>
 	
->	Think of Alt 2 as an optimisation. 
->	In large programs this is very beneficial because we can avoid exhausting the stack.
+>	Think of Alt 2 as an optimisation.   
+>	In large programs this is very beneficial because we can avoid exhausting the stack.  
 	
->	"Tail call is a result that's returned which will immediately be returned by the caller."
+>	"Tail call is a result that's returned which will immediately be returned by the caller."  
 	
->	Notion related to tail calls: Somtime recursive. (calls itself).
+>	Notion related to tail calls: Somtime recursive. (calls itself).  
 >	When recursion is finished, if recursion has a tail call, you call it a tail recursive definition
 	
 	
